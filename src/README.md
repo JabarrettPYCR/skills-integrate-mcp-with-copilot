@@ -6,6 +6,7 @@ A super simple FastAPI application that allows students to view and sign up for 
 
 - View all available extracurricular activities
 - Sign up for activities
+- Keep activities and signups across API restarts with SQLite
 
 ## Getting Started
 
@@ -47,4 +48,4 @@ The application uses a simple data model with meaningful identifiers:
    - Name
    - Grade level
 
-All data is stored in memory, which means data will be reset when the server restarts.
+Activity definitions and student signups are stored in `activities.sqlite` beside `app.py`. The database is initialized with the starter activities on first run. Set `ACTIVITIES_DB_PATH` to use a different database file.
